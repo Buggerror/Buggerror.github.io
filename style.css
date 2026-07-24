@@ -137,6 +137,7 @@ nav h2 {
     height: 340px;
     object-fit: cover;
     display: block;
+    cursor: pointer;
 }
 
 .project-info {
@@ -208,8 +209,47 @@ footer {
     border-top: 1px solid #242424;
 }
 
-@media (max-width: 850px) {
+/* Full-screen image viewer */
 
+.image-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    z-index: 5000;
+    cursor: zoom-out;
+}
+
+.image-overlay img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(168, 85, 247, 0.25);
+}
+
+.close-image {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-image:hover {
+    color: #c084fc;
+    transform: scale(1.1);
+}
+
+/* Tablet sizing */
+
+@media (max-width: 850px) {
     .project-grid {
         grid-template-columns: 1fr;
     }
@@ -219,8 +259,9 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+/* Phone sizing */
 
+@media (max-width: 600px) {
     nav {
         padding: 20px 5%;
     }
@@ -254,5 +295,11 @@ footer {
 
     .image-gallery img {
         height: 110px;
+    }
+
+    .close-image {
+        top: 15px;
+        right: 20px;
+        font-size: 42px;
     }
 }
