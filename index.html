@@ -1,20 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hicham's Portfolio</title>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    background-color: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
 
-<body>
+nav {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #242424;
+    z-index: 100;
+}
 
-    <h1>Hello! 👋</h1>
+nav h2 {
+    color: #a855f7;
+    font-size: 25px;
+}
 
-    <p>This is my first GitHub website.</p>
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
 
-    <script src="script.js"></script>
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: 0.2s;
+}
 
-</body>
-</html>
+.nav-links a:hover {
+    color: #a855f7;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 170px 8% 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(circle at top right, #3a0d4d, transparent 35%),
+        radial-gradient(circle at bottom left, #3b0711, transparent 35%);
+}
+
+.small-title,
+.section-label {
+    color: #a855f7;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 600px;
+    color: #b5b5b5;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.button {
+    width: fit-content;
+    background: #7e22ce;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.button:hover {
+    background: #9333ea;
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 110px 8%;
+}
+
+.section h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 750px;
+    color: #b5b5b5;
+    font-size: 19px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: #111111;
+    border: 1px solid #242424;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #7e22ce;
+    box-shadow: 0 20px 50px rgba(126, 34, 206, 0.18);
+}
+
+.project-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #aaaaaa;
+    margin-bottom: 18px;
+}
+
+.project-info span {
+    display: inline-block;
+    background: #271132;
+    color: #d8b4fe;
+    padding: 6px 11px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.contact {
+    text-align: center;
+    background:
+        radial-gradient(circle, #281034, transparent 60%);
+}
+
+.contact p {
+    color: #b5b5b5;
+    font-size: 18px;
+}
+
+.discord {
+    color: #d8b4fe !important;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777777;
+    border-top: 1px solid #242424;
+}
+
+@media (max-width: 750px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .project-card img {
+        height: 230px;
+    }
+}
