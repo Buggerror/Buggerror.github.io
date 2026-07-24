@@ -1,203 +1,171 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
-body {
-    background-color: #080808;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-nav {
-    width: 100%;
-    padding: 25px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background: rgba(8, 8, 8, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #242424;
-    z-index: 100;
-}
+    <title>Hicham | Roblox Builder</title>
 
-nav h2 {
-    color: #a855f7;
-    font-size: 25px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
+<body>
 
-.nav-links a {
-    color: #cccccc;
-    text-decoration: none;
-    transition: 0.2s;
-}
+    <nav>
+        <h2>Hicham</h2>
 
-.nav-links a:hover {
-    color: #a855f7;
-}
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-.hero {
-    min-height: 100vh;
-    padding: 170px 8% 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background:
-        radial-gradient(circle at top right, #3a0d4d, transparent 35%),
-        radial-gradient(circle at bottom left, #3b0711, transparent 35%);
-}
 
-.small-title,
-.section-label {
-    color: #a855f7;
-    font-size: 13px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+    <header class="hero">
 
-.hero h1 {
-    max-width: 900px;
-    font-size: clamp(50px, 8vw, 95px);
-    line-height: 1;
-    margin-bottom: 25px;
-}
+        <p class="small-title">ROBLOX BUILDER & ENVIRONMENT DESIGNER</p>
 
-.hero-description {
-    max-width: 600px;
-    color: #b5b5b5;
-    font-size: 20px;
-    margin-bottom: 35px;
-}
+        <h1>I create immersive Roblox environments.</h1>
 
-.button {
-    width: fit-content;
-    background: #7e22ce;
-    color: white;
-    text-decoration: none;
-    padding: 14px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.25s;
-}
+        <p class="hero-description">
+            I build detailed, atmospheric and optimized environments
+            using Roblox Studio.
+        </p>
 
-.button:hover {
-    background: #9333ea;
-    transform: translateY(-3px);
-}
+        <a href="#projects" class="button">View My Builds</a>
 
-.section {
-    padding: 110px 8%;
-}
+    </header>
 
-.section h2 {
-    font-size: clamp(35px, 5vw, 55px);
-    margin-bottom: 20px;
-}
 
-.about-text {
-    max-width: 750px;
-    color: #b5b5b5;
-    font-size: 19px;
-}
+    <section id="about" class="section">
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
+        <p class="section-label">ABOUT ME</p>
 
-.project-card {
-    background: #111111;
-    border: 1px solid #242424;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: 0.3s;
-}
+        <h2>Builder with 5 years of experience.</h2>
 
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: #7e22ce;
-    box-shadow: 0 20px 50px rgba(126, 34, 206, 0.18);
-}
+        <p class="about-text">
+            I am a Roblox builder focused on creating polished maps,
+            environments and structures. I have experience with realistic,
+            low-poly, fantasy and classic Roblox styles.
+        </p>
 
-.project-card img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-    display: block;
-}
+    </section>
 
-.project-info {
-    padding: 25px;
-}
 
-.project-info h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
-}
+    <section id="projects" class="section">
 
-.project-info p {
-    color: #aaaaaa;
-    margin-bottom: 18px;
-}
+        <p class="section-label">MY WORK</p>
 
-.project-info span {
-    display: inline-block;
-    background: #271132;
-    color: #d8b4fe;
-    padding: 6px 11px;
-    border-radius: 6px;
-    font-size: 13px;
-}
+        <h2>Featured Builds</h2>
 
-.contact {
-    text-align: center;
-    background:
-        radial-gradient(circle, #281034, transparent 60%);
-}
 
-.contact p {
-    color: #b5b5b5;
-    font-size: 18px;
-}
+        <div class="project-grid">
 
-.discord {
-    color: #d8b4fe !important;
-    margin-top: 20px;
-    font-weight: bold;
-}
+            <div class="project-card">
 
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777777;
-    border-top: 1px solid #242424;
-}
+                <img src="city.png" alt="Roblox city build">
 
-@media (max-width: 750px) {
+                <div class="project-info">
 
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+                    <h3>Realistic City</h3>
 
-    .nav-links {
-        gap: 15px;
-        font-size: 14px;
-    }
+                    <p>
+                        A detailed city environment created inside Roblox Studio,
+                        featuring buildings, streets and environmental decoration.
+                    </p>
 
-    .project-card img {
-        height: 230px;
-    }
-}
+                    <span>Roblox Studio</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <img src="elden-ring.png" alt="Fantasy Roblox environment">
+
+                <div class="project-info">
+
+                    <h3>Fantasy Environment</h3>
+
+                    <p>
+                        An Elden Ring-inspired environment focused on atmosphere,
+                        architecture and dramatic scenery.
+                    </p>
+
+                    <span>Roblox Studio</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <img src="squid-game.png" alt="Squid Game Roblox map">
+
+                <div class="project-info">
+
+                    <h3>Squid Game Inspired Map</h3>
+
+                    <p>
+                        A realistic map inspired by Squid Game, built with detailed
+                        structures, lighting and recognizable environments.
+                    </p>
+
+                    <span>Roblox Studio</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <img src="low-poly.png" alt="Low-poly Roblox map">
+
+                <div class="project-info">
+
+                    <h3>Low-Poly Map</h3>
+
+                    <p>
+                        A colorful and optimized low-poly environment designed
+                        for smooth gameplay and strong visual appeal.
+                    </p>
+
+                    <span>Roblox Studio</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="section contact">
+
+        <p class="section-label">CONTACT</p>
+
+        <h2>Interested in working with me?</h2>
+
+        <p>
+            You can contact me through Discord for commissions,
+            collaborations or questions.
+        </p>
+
+        <p class="discord">Discord: yourusername</p>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 Hicham. Built with GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
