@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #080808;
+    background-color: #070707;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -14,16 +14,16 @@ body {
 
 nav {
     width: 100%;
-    padding: 25px 8%;
+    padding: 24px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
-    background: rgba(8, 8, 8, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #242424;
-    z-index: 100;
+    background: rgba(7, 7, 7, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #262626;
+    z-index: 1000;
 }
 
 nav h2 {
@@ -43,7 +43,7 @@ nav h2 {
 }
 
 .nav-links a:hover {
-    color: #a855f7;
+    color: #c084fc;
 }
 
 .hero {
@@ -53,8 +53,8 @@ nav h2 {
     flex-direction: column;
     justify-content: center;
     background:
-        radial-gradient(circle at top right, #3a0d4d, transparent 35%),
-        radial-gradient(circle at bottom left, #3b0711, transparent 35%);
+        radial-gradient(circle at top right, #3b0b52, transparent 35%),
+        radial-gradient(circle at bottom left, #400914, transparent 35%);
 }
 
 .small-title,
@@ -67,14 +67,14 @@ nav h2 {
 }
 
 .hero h1 {
-    max-width: 900px;
+    max-width: 950px;
     font-size: clamp(50px, 8vw, 95px);
     line-height: 1;
     margin-bottom: 25px;
 }
 
 .hero-description {
-    max-width: 600px;
+    max-width: 650px;
     color: #b5b5b5;
     font-size: 20px;
     margin-bottom: 35px;
@@ -82,18 +82,18 @@ nav h2 {
 
 .button {
     width: fit-content;
-    background: #7e22ce;
+    background: linear-gradient(135deg, #7e22ce, #991b1b);
     color: white;
     text-decoration: none;
     padding: 14px 25px;
-    border-radius: 8px;
+    border-radius: 9px;
     font-weight: bold;
     transition: 0.25s;
 }
 
 .button:hover {
-    background: #9333ea;
     transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(126, 34, 206, 0.3);
 }
 
 .section {
@@ -106,7 +106,7 @@ nav h2 {
 }
 
 .about-text {
-    max-width: 750px;
+    max-width: 800px;
     color: #b5b5b5;
     font-size: 19px;
 }
@@ -114,14 +114,14 @@ nav h2 {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 35px;
     margin-top: 50px;
 }
 
 .project-card {
-    background: #111111;
-    border: 1px solid #242424;
-    border-radius: 15px;
+    background: #101010;
+    border: 1px solid #282828;
+    border-radius: 16px;
     overflow: hidden;
     transition: 0.3s;
 }
@@ -129,12 +129,12 @@ nav h2 {
 .project-card:hover {
     transform: translateY(-8px);
     border-color: #7e22ce;
-    box-shadow: 0 20px 50px rgba(126, 34, 206, 0.18);
+    box-shadow: 0 20px 55px rgba(126, 34, 206, 0.18);
 }
 
-.project-card img {
+.project-card > img {
     width: 100%;
-    height: 330px;
+    height: 340px;
     object-fit: cover;
     display: block;
 }
@@ -162,10 +162,31 @@ nav h2 {
     font-size: 13px;
 }
 
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 12px 12px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.15);
+}
+
 .contact {
     text-align: center;
     background:
-        radial-gradient(circle, #281034, transparent 60%);
+        radial-gradient(circle, #2a1036, transparent 60%);
 }
 
 .contact p {
@@ -177,6 +198,7 @@ nav h2 {
     color: #d8b4fe !important;
     margin-top: 20px;
     font-weight: bold;
+    font-size: 20px !important;
 }
 
 footer {
@@ -186,18 +208,51 @@ footer {
     border-top: 1px solid #242424;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
 
     .project-grid {
         grid-template-columns: 1fr;
     }
 
-    .nav-links {
-        gap: 15px;
-        font-size: 14px;
+    .hero h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 20px 5%;
     }
 
-    .project-card img {
-        height: 230px;
+    nav h2 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 13px;
+        font-size: 13px;
+    }
+
+    .hero,
+    .section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .project-card > img {
+        height: 240px;
+    }
+
+    .image-gallery img {
+        height: 110px;
     }
 }
